@@ -1,0 +1,19 @@
+[linux:children]
+ubuntuServer
+ubuntuDesktop
+
+[ubuntuServer]
+server1 ansible_host=192.168.100.168
+server2 ansible_host=192.168.100.186
+
+[ubuntuDesktop]
+server3 ansible_host=192.168.100.181
+
+
+[linux:vars]
+ansible_user=nalinda
+ansible_ssh_private_key_file=/home/nalinda/.ssh/mh-1-ubuntu
+ansible_python_interpreter=/usr/bin/python3
+ansible_become=true
+ansible_become_method=sudo
+
